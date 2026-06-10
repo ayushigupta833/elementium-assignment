@@ -1,0 +1,27 @@
+.navbar {
+  padding: 2rem 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  font-size: 14px;
+}
+
+.menu {
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+}

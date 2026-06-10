@@ -1,0 +1,200 @@
+.testimonials {
+  padding: 8rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* HEADING */
+
+.heading {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.heading h2 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1;
+  font-weight: 500;
+}
+
+.heading span {
+  background: #dcefdc;
+  padding-inline: 12px;
+  border-radius: 20px;
+}
+
+/* WRAPPER */
+
+.wrapper {
+  position: relative;
+  min-height: 550px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* TESTIMONIAL CARD */
+
+.card {
+  width: 520px;
+
+  background: #eef6ee;
+
+  padding: 3rem;
+
+  border-radius: 30px;
+
+  position: relative;
+
+  text-align: center;
+
+  z-index: 2;
+}
+
+.card p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #444;
+}
+
+/* QUOTES */
+
+.quoteTop,
+.quoteBottom {
+  position: absolute;
+  font-size: 5rem;
+  color: #d2d2d2;
+}
+
+.quoteTop {
+  top: 5px;
+  left: 20px;
+}
+
+.quoteBottom {
+  bottom: -10px;
+  right: 20px;
+}
+
+/* AVATARS */
+
+.avatar {
+  position: absolute;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 5px solid white;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  transition: 0.3s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+}
+
+/* LEFT SIDE */
+
+.a1 {
+  width: 70px;
+  height: 70px;
+
+  top: 20px;
+  left: 8%;
+}
+
+.a2 {
+  width: 150px;
+  height: 150px;
+
+  top: 160px;
+  left: 12%;
+}
+
+.a3 {
+  width: 80px;
+  height: 80px;
+
+  bottom: 80px;
+  left: 10%;
+}
+
+/* RIGHT SIDE */
+
+.a4 {
+  width: 70px;
+  height: 70px;
+
+  top: 40px;
+  right: 12%;
+}
+
+.a5 {
+  width: 90px;
+  height: 90px;
+
+  top: 180px;
+  right: 18%;
+}
+
+.a6 {
+  width: 180px;
+  height: 180px;
+
+  bottom: 20px;
+  right: 8%;
+}
+
+/* TABLET */
+
+@media (max-width: 992px) {
+
+  .wrapper {
+    min-height: 450px;
+  }
+
+  .card {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  .a2 {
+    width: 110px;
+    height: 110px;
+  }
+
+  .a6 {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .wrapper {
+    min-height: auto;
+  }
+
+  .avatar {
+    display: none;
+  }
+
+  .card {
+    width: 100%;
+    padding: 2rem 1.5rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .heading h2 {
+    font-size: 2.3rem;
+  }
+}

@@ -1,0 +1,61 @@
+/* =========================
+   LARGE TABLETS
+========================= */
+
+@media (max-width: 1024px) {
+
+  section {
+    padding: 5rem 0;
+  }
+
+  .container {
+    width: 92%;
+  }
+
+}
+
+
+/* =========================
+   TABLETS
+========================= */
+
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  section {
+    padding: 4rem 0;
+  }
+
+  h1 {
+    line-height: 1.1;
+  }
+
+  h2 {
+    line-height: 1.2;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 94%;
+  }
+
+  section {
+    padding: 3rem 0;
+  }
+
+}

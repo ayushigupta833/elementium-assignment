@@ -1,0 +1,208 @@
+.feature {
+  padding: 6rem 0;
+  position: relative;
+}
+
+/* WRAPPER */
+
+.wrapper {
+  width: min(90%, 1100px);
+
+  margin-inline: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 5rem;
+
+  position: relative;
+}
+
+/* REVERSE */
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+/* CONTENT */
+
+.content {
+  flex: 1;
+  max-width: 420px;
+}
+
+.content h2 {
+  font-size: clamp(2.2rem, 4vw, 4rem);
+
+  line-height: 1;
+
+  font-weight: 500;
+
+  margin-bottom: 1rem;
+
+  letter-spacing: -2px;
+}
+
+.content p {
+  color: #555;
+
+  line-height: 1.8;
+
+  margin-bottom: 1.5rem;
+
+  font-size: 0.95rem;
+}
+
+/* BUTTON */
+
+.content button {
+  border: none;
+  background: transparent;
+
+  border-bottom: 1px solid black;
+
+  padding-bottom: 4px;
+
+  cursor: pointer;
+
+  font-size: 0.9rem;
+}
+
+/* IMAGE */
+
+.imageWrapper {
+  flex: 1;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+}
+
+.imageWrapper img {
+  width: 420px;
+  height: 420px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  z-index: 2;
+
+  position: relative;
+}
+
+/* TRIANGLE */
+
+.triangle {
+  position: absolute;
+
+  width: 120px;
+  height: 120px;
+
+  background: #ff6b6b;
+
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+
+  z-index: 1;
+}
+
+/* TOP SECTION TRIANGLE */
+
+.wrapper:not(.reverse) .triangle {
+  top: -20px;
+  right: 30px;
+}
+
+/* BOTTOM SECTION TRIANGLE */
+
+.reverse .triangle {
+  bottom: -20px;
+  left: 30px;
+}
+
+/* DECORATIVE CURVE */
+
+.feature::after {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 200px;
+
+  border-top: 3px solid #f5a3ad;
+
+  border-radius: 50%;
+
+  opacity: 0.7;
+
+  z-index: 0;
+}
+
+/* FIRST SECTION CURVE */
+
+.feature:nth-child(1)::after {
+  bottom: -60px;
+  left: 30%;
+}
+
+/* SECOND SECTION CURVE */
+
+.feature:nth-child(2)::after {
+  top: -50px;
+  right: 20%;
+}
+
+/* TABLET */
+
+@media (max-width: 992px) {
+
+  .wrapper {
+    gap: 3rem;
+  }
+
+  .imageWrapper img {
+    width: 320px;
+    height: 320px;
+  }
+
+  .triangle {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .wrapper,
+  .reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .content p {
+    margin-inline: auto;
+  }
+
+  .imageWrapper img {
+    width: 260px;
+    height: 260px;
+  }
+
+  .triangle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .feature::after {
+    display: none;
+  }
+}
